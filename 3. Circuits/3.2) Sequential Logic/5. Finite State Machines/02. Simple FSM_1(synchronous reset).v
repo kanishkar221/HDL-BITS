@@ -5,7 +5,8 @@ module top_module(clk, reset, in, out);
     output out;//  
     reg out;
 
-   	parameter A=0, B=1;
+   	parameter A=0;
+    parameter B=1;
   	reg present_state, next_state;
 
     always @(posedge clk) begin
