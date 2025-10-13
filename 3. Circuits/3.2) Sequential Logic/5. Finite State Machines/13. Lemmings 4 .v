@@ -52,4 +52,5 @@ module top_module(
     assign walk_right = (state == right);
     assign aaah = (state == fall_l) || (state == fall_r);
     assign digging = (state == dig_l) || (state == dig_r);
+    
 endmodule
