@@ -4,7 +4,10 @@ module top_module(
     output [3:0] next_state,
     output out); //
 
-    parameter A=0, B=1, C=2, D=3;
+    parameter A=0;
+    parameter B=1;
+    parameter C=2;
+    parameter D=3;
     
    	assign next_state[A] = (state[A]&~in) | (state[C]&~in) ;
     assign next_state[B] = in&(state[A] |state[B] | state[D]);
