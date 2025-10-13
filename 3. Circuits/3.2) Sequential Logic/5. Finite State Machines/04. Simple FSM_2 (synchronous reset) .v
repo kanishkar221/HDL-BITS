@@ -5,7 +5,8 @@ module top_module(
     input k,
     output out); //  
 
-    parameter OFF=0, ON=1; 
+    parameter OFF=0;
+    parameter ON=1; 
     reg state, next_state;
 
     always @(*) begin
