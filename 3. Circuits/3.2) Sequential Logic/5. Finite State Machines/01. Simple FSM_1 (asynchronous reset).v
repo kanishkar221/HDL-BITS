@@ -4,7 +4,8 @@ module top_module(
     input in,
     output out);//  
 
-    parameter A=0, B=1; 
+    parameter A=0;
+	parameter B=1; 
     reg state, next_state;
 
     always @(*) begin
