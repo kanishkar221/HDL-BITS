@@ -4,7 +4,10 @@ module top_module(
     output [1:0] next_state,
     output out); //
 
-    parameter A=0, B=1, C=2, D=3;
+    parameter A=0;
+	parameter B=1;
+	parameter C=2;
+	parameter D=3;
 	always @(*)
         case(state)
             A:begin
