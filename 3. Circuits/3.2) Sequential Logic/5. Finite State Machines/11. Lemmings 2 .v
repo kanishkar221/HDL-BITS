@@ -12,6 +12,7 @@ module top_module(
     parameter walk_r = 1;
     parameter fall_l = 2;
     parameter fall_r = 3;
+	
     reg [1:0] state,next_state;
     
     always @ (posedge clk or posedge areset) begin
@@ -33,4 +34,5 @@ module top_module(
     assign walk_left = (state == walk_l);
     assign walk_right = (state == walk_r);
     assign aaah = (state == fall_l) || (state == fall_r);
+	
 endmodule
