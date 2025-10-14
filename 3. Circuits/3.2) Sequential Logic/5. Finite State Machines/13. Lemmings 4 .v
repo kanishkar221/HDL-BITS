@@ -8,7 +8,7 @@ module top_module(
     output walk_left,
     output walk_right,
     output aaah,
-    output digging ); 
+    output digging );
     
     parameter left = 0;
     parameter right = 1;
