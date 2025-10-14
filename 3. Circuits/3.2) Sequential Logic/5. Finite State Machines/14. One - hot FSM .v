@@ -19,7 +19,7 @@ module top_module(
 
     assign next_state[s0] = (state[s0] & ~in) | (state[s1] & ~in) | (state[s2] & ~in) | (state[s3] & ~in) | (state[s4] & ~in) | (state[s7] & ~in) |
                             (state[s8] & ~in) | (state[s9] & ~in);
-	   assign next_state[s1] = (state[s0] & in) | (state[s8] & in) | (state[s9] & in);
+	assign next_state[s1] = (state[s0] & in) | (state[s8] & in) | (state[s9] & in);
     assign next_state[s2] = state[s1] & in;
     assign next_state[s3] = state[s2] & in;
     assign next_state[s4] = state[s3] & in;
