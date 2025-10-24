@@ -8,19 +8,19 @@ module top_module(
     
    	parameter NONE = 0;
     parameter ONE  = 1;
-	  parameter TWO  = 2;
-	  parameter THREE= 3;
-	  parameter FOUR = 4;
-	  parameter FIVE = 5;
-	  parameter SIX  = 6;
-	  parameter DISC = 7;
-	  parameter FLAG = 8;
-	  parameter ERR  = 9;
+	parameter TWO  = 2;
+	parameter THREE= 3;
+	parameter FOUR = 4;
+	parameter FIVE = 5;
+	parameter SIX  = 6;
+	parameter DISC = 7;
+	parameter FLAG = 8;
+	parameter ERR  = 9;
 
     reg [3:0] state, next_state;
 
-	  always @(*) begin
-		  case (state)
+	always @(*) begin
+		case (state)
             NONE : next_state = (in) ? ONE : NONE;
             ONE : next_state = (in) ? TWO : NONE;
             TWO	: next_state = (in) ? THREE : NONE;
@@ -28,10 +28,10 @@ module top_module(
             FOUR : next_state = (in) ? FIVE : NONE;
             FIVE : next_state = (in) ? SIX : DISC;
             SIX	: next_state = (in) ? ERR : FLAG;
-			      DISC : next_state = (in) ? ONE : NONE;
-			      FLAG : next_state = (in) ? ONE : NONE;
-			      ERR : next_state = (in) ? ERR : NONE;
-		  endcase
+			DISC : next_state = (in) ? ONE : NONE;
+			FLAG : next_state = (in) ? ONE : NONE;
+			ERR : next_state = (in) ? ERR : NONE;
+		endcase
 	  end 
 
 	  always @(posedge clk) begin
