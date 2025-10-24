@@ -5,15 +5,15 @@ module top_module(
     output [7:0] out_byte,
     output done
 ); //
-	  parameter IDLE = 3'b000;
-	  parameter START = 3'b001;
-	  parameter RECEIVE = 3'b010;
-	  parameter WAIT = 3'b011;
-	  parameter STOP = 3'b100;
+	parameter IDLE = 3'b000;
+	parameter START = 3'b001;
+	parameter RECEIVE = 3'b010;
+	parameter WAIT = 3'b011;
+	parameter STOP = 3'b100;
     parameter CHECK = 3'b101;
 
-	  reg [2:0] state, next;
-	  reg [3:0] i;
+	reg [2:0] state, next;
+	reg [3:0] i;
     reg [7:0] out;
     reg odd_reset;
     reg odd_reg;
