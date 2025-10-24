@@ -6,7 +6,7 @@ module top_module(
     output done
 ); //
 
-    parameter IDLE = 3'b000;
+      parameter IDLE = 3'b000;
 	  parameter START = 3'b001;
 	  parameter RECEIVE = 3'b010;
 	  parameter WAIT = 3'b011;
@@ -14,7 +14,7 @@ module top_module(
 
 	  reg [2:0] state, next;
 	  reg [3:0] i;
-    reg [7:0] out;
+      reg [7:0] out;
 
 	  always @(*) begin
 		  case(state)
