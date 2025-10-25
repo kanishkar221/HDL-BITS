@@ -22,18 +22,18 @@ module top_module (
         begin
             case (state)
                 S0: begin
-                    if (x) next_state <= S1;
-                    else   next_state <= S0;
+                    if (x) next_state = S1;
+                    else   next_state = S0;
                 end
                 S1: begin
-                    if (x) next_state <= S2;
-                    else   next_state <= S1;
+                    if (x) next_state = S2;
+                    else   next_state = S1;
                 end
                 S2: begin
-                    if (x) next_state <= S2;
-                    else   next_state <= S1;
+                    if (x) next_state = S2;
+                    else   next_state = S1;
                 end
-                default : next_state <= S0;
+                default : next_state = S0;
             endcase
         end
     
