@@ -4,7 +4,7 @@ module top_module (
     input w,
     output z
 );
-	  parameter A=0;
+	parameter A=0;
     parameter B=1;
     parameter C=2;
     parameter D=3;
