@@ -3,7 +3,7 @@ module top_module(
     output w,x,y,z );
     
     assign w = a;
-	  assign y = b;
+	assign y = b;
    	assign x = b;
     assign z = c;
 endmodule
